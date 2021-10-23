@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,138 +6,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario RT</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            font-size: 15px;
+            width: 50%;
+            letter-spacing: 2px;
+        
+          </style>
 </head>
 <body>
     <div class="box">
-         <form action="">
-             <fieldset>
-             <legend><b> Cadastro Pessoal</b> </legend>
-             <div class="inputBox">
-                  <label for="Nome"></label>Nome Completo*</label>  
-                 <input type="text" name="nome"id="nome"class="inputUser"required>
-           
+        <form action="">
+            <fieldset>
+                <legend><b>Fórmulário de Clientes</b></legend>
                 <br>
+
+                <div class="inputBox">
+                    <label for="nome">Nome completo<span style="color:red"><strong>*</strong></span></label><br>
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <label for="CPF"></label>CPF<span style="color:red"><strong>*</strong></span></label><br>
+                    <input type="text" id="CPF*" name="CPF*" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" class="inputUser" required>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <label for="RG"></label>RG</label><br>
+                    <input type="text" id="RG" name="RG" pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}-[0-9]{1}" class="inputUser">
+                </div>
+                <br><br>
+
+                <p>Sexo:</p>
+                <label for="feminino">Feminino</label>
+                <input type="radio" id="feminino" name="genero" value="feminino">
                 <br>
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="masculino" name="genero" value="masculino">
+                <br>
+                <label for="outro">Outro</label>
+                <input type="radio" id="outro" name="genero" value="outro">
+                <br><br>
+
                 <div class="inputBox">
-                    <label for="nome"></label> CPF*</label> 
-          <input type="text" id="CPF*" name="CPF*" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" required      	
-    
-     
-    
-     <div class="inputBox">
-                  <label for="nome"></label>  RG</label> 
-         <input type="text" id="RG" name="RG" pattern="00.000.000"> 
-            <br>
-        <br>
+                    <label for="email">Celular<span style="color:red"><strong>*</strong></span></label><br>
+                    <input type="text" name="celular" id="celular" class="inputUser" required>
+                </div>
+                <br><br>
 
-   </div>
-     
-    <div class="inputBox">
-                  <label for="nome"></label>  Telefone</label> 
-         <input type="number" id="Telefone" name="Telefone" pattern=""([0-9]{2})-[0-9]{4}-[0-9]{4}"> 
-            <br>
-
-            <div class="inputBox">
-                  <label for="nome"></label>  Celular</label> 
-         <input type="number" id="Celular*" name="Celular*" pattern="([0-9]{2})-[0-9]{4}-[0-9]{4}" required
-
-
-            <br>
-            
-
-            <p>Sexo</p>
-            <input type="radio" id=Feminino name="genero" valor "FEMININO" required
-            <label for="feminino">FEMININO</label>
-        
-             <input type="radio" id=Masculino name="genero" valor "MASCULINO" required
-            <label for="Masculino">MASCULINO</label>
-            
-            <input type="radio" id=Outros name="genero" valor "OUTROS" required
-            <label for="outros">OUTROS</label>
-            <br>
-            <br>
-            <br>
-
-          
-    
-        </div class="inputBox">
-         <label for="Data_nascimento"> </b>Data de Nascimento:</b></label> 
-            <input type="date"nome="Data_nascimento" id="Data_nascimento" class="imputuse"required
-            <label for="Data_nascimento":</Ano de Nascimento:>
-          
-           
-          <br>
-          <br>
-     <!-- Dados de Endereco -->
-  	<td><label for="Endereco">Endereço*: </label>
-       <input type="text" id="Endereco" name="Endereço"class="inputUser"required>
-       <div class="inputBox">
-
-        <label for="number">Numero*: </label>
-  	<input type="number" id="Numero" name="number"  class="inputUser"required>
-      
-      
-      <div class="inputBox">
-        <label for="Bairro">Bairro: </label>
-            <input type="text" id="Bairro" name="Bairro"
-            <div class="inputBox"> 
-
-            </div>
-         
-            <td><label for="Cidade">Cidade: </label>
-                <input type="text" id="Endereco" name="Endereço"class="inputUser"required>
                 <div class="inputBox">
+                    <label for="endereco">Endereço<span style="color:red"><strong>*</strong></span></label>
+                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                    <br><br>
+                    <label for="numero">Numero <span style="color:red"><strong>*</strong></span></label>
+                    <input type="text" name="numero" id="numero" style="width: 5%;" required>
+                </div>
+                <br><br>
 
-  
+                <div class="inputBox">
+                    <label for="bairro">Bairro</label><br>
+                    <input type="text" name="bairro" id="bairro" class="inputUser">
+                </div>
+                <br><br>
+                
+                <div class="inputBox">
+                    <label for="cidade">Cidade</label><br>
+                    <input type="text" name="cidade" id="cidade" class="inputUser">
+                </div>
+                <br><br>
 
-
-  <label for="Num">UF:</label>
-    <select name="UF" id="UF">
-     <option value="AC">ACRE</option>
-     <option value="AL">ALAGOAS</option>
-     <option value="AP">AMAPA</option>
-     <option value="AM">AMAZONAS</option>
-     <option value="BA">BAHIA</option> 
-     <option value="CE">CEARA</option>
-     <option value="DF">DISTRITO FEDERAL</option>
-     <option value="ES">ESPÍRITO SANTO</option>
-	 <option value="GO">GOIAS</option>
-	 <option value="MA">MARANHÃO</option>
-	 <option value="MT">MATO GROSSO</option>
-	 <option value="MS">MATO GROSSO DO SUL</option>
-	 <option value="MG">MINAS GERAIS</option>
-	 <option value="PA">PARÁ</option>
-	 <option value="PB">PARAÍBA</option>
-	 <option value="PR">PARANÁ</option>
-	 <option value="PE">PERNAMBUCO</option>
-	 <option value="PI">PIAUÍ</option>
-	 <option value="RJ">RIO DE JANEIRO</option>
-	 <option value="RN">RIO GRANDE DO NORTE</option>
-	 <option value="RS">RIO GRANDE DO SUL</option>
-	 <option value="RO">RONDÔNIA</option>
-	 <option value="RR">RORAIMA</option>
-	 <option value="SC">SANTA CATARINA</option>
-	 <option value="SP">SAO PAULO</option>
-	 <option value="SE">SERGIPE</option>
-	 <option value="TO">TOCANTINS</option>
-            >
-    <tr> <br>
-     div
->
-  <th><label for="Aviso">Aviso: * campos obrigatórios</label><br><br></th>
-  </tr>
-  <tr><div></div>
-     <div class="inputBox">
-       
-     </div>
-<br>
-  </tr>
-</form> 
-</table>        
-  <div class="inputBox"></div>
-<input type="submit" value="Submit"></td>
-  </tr>
-
-sabadoquarto
-     
- 
+                <label for="Num">UF:</label>
+                <select name="UF" id="UF">
+                    <option value="AC">ACRE</option>
+                    <option value="AL">ALAGOAS</option>
+                    <option value="AP">AMAPA</option>
+                    <option value="AM">AMAZONAS</option>
+                    <option value="BA">BAHIA</option> 
+                    <option value="CE">CEARA</option>
+                    <option value="DF">DISTRITO FEDERAL</option>
+                    <option value="ES">ESPÍRITO SANTO</option>
+                    <option value="GO">GOIAS</option>
+                    <option value="MA">MARANHÃO</option>
+                    <option value="MT">MATO GROSSO</option>
+                    <option value="MS">MATO GROSSO DO SUL</option>
+                    <option value="MG">MINAS GERAIS</option>
+                    <option value="PA">PARÁ</option>
+                    <option value="PB">PARAÍBA</option>
+                    <option value="PR">PARANÁ</option>
+                    <option value="PE">PERNAMBUCO</option>
+                    <option value="PI">PIAUÍ</option>
+                    <option value="RJ">RIO DE JANEIRO</option>
+                    <option value="RN">RIO GRANDE DO NORTE</option>
+                    <option value="RS">RIO GRANDE DO SUL</option>
+                    <option value="RO">RONDÔNIA</option>
+                    <option value="RR">RORAIMA</option>
+                    <option value="SC">SANTA CATARINA</option>
+                    <option value="SP">SAO PAULO</option>
+                    <option value="SE">SERGIPE</option>
+                    <option value="TO">TOCANTINS</option>
+                </select>
+                <br><br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+</body>
