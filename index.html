@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -27,25 +28,28 @@
                 <legend><b>Fórmulário de Clientes</b></legend>
                 <br>
 
-                <div class="inputBox">
-                    <label for="nome">Nome completo<span style="color:red"><strong>*</strong></span></label><br>
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                <div class="inputBox"> <!-- Nome Completo -->
+				    <!-- Dados de Endereco -->
+                    <!-- <label for="nome">Nome completo<span style="color:red"><strong>*</strong></span></label><br> -->
+                    <input type="text" name="nome" id="nome" class="inputUser" placeholder= 'Nome Completo' required> <label for="nome"><span style="color:red"><strong>*</strong></span></label>
                 </div>
-                <br><br>
+                <br>
 
-                <div class="inputBox">
-                    <label for="CPF"></label>CPF<span style="color:red"><strong>*</strong></span></label><br>
-                    <input type="text" id="CPF*" name="CPF*" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" class="inputUser" required>
+                <div class="inputBox"> <!-- CPF -->
+                    <!-- <label for="CPF"></label>CPF<span style="color:red"><strong>*</strong></span></label><br> -->
+                    <input type="text" id="CPF" name="CPF" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" placeholder= 'CPF' class="inputUser" required>
+                    <label for="CPF"></label><span style="color:red"><strong>*</strong></span></label><br>
+				</div>
+                <br>
+
+                <div class="inputBox"> <!-- RG -->
+                    <!-- <label for="RG"></label>RG</label><br> -->
+                    <input type="text" id="RG" name="RG" pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}-[0-9]{1}" placeholder="RG" class="inputUser">
+					
                 </div>
-                <br><br>
+                <br>
 
-                <div class="inputBox">
-                    <label for="RG"></label>RG</label><br>
-                    <input type="text" id="RG" name="RG" pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}-[0-9]{1}" class="inputUser">
-                </div>
-                <br><br>
-
-                <p>Sexo:</p>
+                <p>Sexo:</p> <!-- Sexo -->
                 <label for="feminino">Feminino</label>
                 <input type="radio" id="feminino" name="genero" value="feminino">
                 <br>
@@ -56,35 +60,49 @@
                 <input type="radio" id="outro" name="genero" value="outro">
                 <br><br>
 
-                <div class="inputBox">
-                    <label for="email">Celular<span style="color:red"><strong>*</strong></span></label><br>
-                    <input type="text" name="celular" id="celular" class="inputUser" required>
+                <div class="inputBox"> <!-- Celular -->
+                   <!-- <label for="email">Celular<span style="color:red"><strong>*</strong></span></label><br> -->
+                    <input type="text" name="celular" id="celular" class="inputUser" placeholder="Celular" required> <label for="email"><span style="color:red"><strong>*</strong></span></label><br>
                 </div>
-                <br><br>
+                <br>
+				
+				<div class="inputBox"> <!-- Telefone -->
+                    <!-- <label for="bairro">Bairro</label><br> -->
+                    <input type="text" name="telefone" id="telefone" placeholder="Telefone Fixo" class="inputUser">
+                </div>
+                <br>
 
-                <div class="inputBox">
-                    <label for="endereco">Endereço<span style="color:red"><strong>*</strong></span></label>
-                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                    <br><br>
-                    <label for="numero">Numero <span style="color:red"><strong>*</strong></span></label>
-                    <input type="text" name="numero" id="numero" style="width: 5%;" required>
+                <div class="inputBox">  <!-- Endereco / Num -->
+                   <!-- <label for="endereco">Endereço<span style="color:red"><strong>*</strong></span></label> -->
+                    <input type="text" name="endereco" id="endereco" class="inputUser" placeholder="Endereço" required>  <label for="endereco"><span style="color:red"><strong>*</strong></span></label>
+                    
+                    
+					<!-- <label for="numero">Numero <span style="color:red"><strong>*</strong></span></label> -->
+                    <input type="text" name="numero" id="numero" style="width: 5%;" placeholder="Num" required> <label for="numero"> <span style="color:red"><strong>*</strong></span></label>
                 </div>
-                <br><br>
+                <br>
 
-                <div class="inputBox">
-                    <label for="bairro">Bairro</label><br>
-                    <input type="text" name="bairro" id="bairro" class="inputUser">
+                <div class="inputBox"> <!-- Bairro -->
+                    <!-- <label for="bairro">Bairro</label><br> -->
+                    <input type="text" name="bairro" id="bairro" placeholder="Bairro" class="inputUser">
                 </div>
-                <br><br>
+                <br>
                 
-                <div class="inputBox">
-                    <label for="cidade">Cidade</label><br>
-                    <input type="text" name="cidade" id="cidade" class="inputUser">
+                <div class="inputBox"> <!-- Cidade -->
+                    <!-- <label for="cidade">Cidade</label><br> -->
+                    <input type="text" name="cidade" id="cidade" placeholder="Cidade" class="inputUser">
                 </div>
-                <br><br>
+                <br>
+				
+				<div class="inputBox"> <!-- CEP -->
+                    <!-- <label for="cidade">CEP</label><br> -->
+                    <input type="text" name="CEP" id="CEP" placeholder="CEP" class="inputUser">
+                </div>
+                <br>
 
                 <label for="Num">UF:</label>
-                <select name="UF" id="UF">
+                <select name="UF" id="UF" placeholder="UF" >
+				    <option value="">Selecione...</option>
                     <option value="AC">ACRE</option>
                     <option value="AL">ALAGOAS</option>
                     <option value="AP">AMAPA</option>
@@ -113,7 +131,7 @@
                     <option value="SE">SERGIPE</option>
                     <option value="TO">TOCANTINS</option>
                 </select>
-                <br><br>
+                <br><br><br><br>
                 <input type="submit" name="submit" id="submit">
             </fieldset>
         </form>
